@@ -4,3 +4,4 @@ git push origin backend
 git checkout main
 git merge backend
 git push origin main
+git checkout backend
