@@ -1,0 +1,51 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": ["react", "@typescript-eslint"],
+	"rules": {
+		"implicit-arrow-linebreak": "off",
+		"react/prop-types": "off",
+		"react/display-name": "off",
+
+		"indent": [
+			"error",
+			"tab",
+			{
+				"ignoredNodes": ["TemplateLiteral"]
+			}
+		],
+		"linebreak-style": [
+			"warn",
+			// "unix"
+			"windows"
+		],
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"],
+		"template-curly-spacing": "off",
+		"no-debugger": "warn",
+		"react/react-in-jsx-scope": "off",
+		"no-tabs": "off",
+		"react/jsx-props-no-spreading": "off",
+
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": [
+			"error", // "warn" or "error"
+			{
+				"argsIgnorePattern": "^_",
+				"varsIgnorePattern": "^_",
+				"caughtErrorsIgnorePattern": "^_"
+			}
+		]
+	}
+}

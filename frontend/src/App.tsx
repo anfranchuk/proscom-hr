@@ -2,16 +2,20 @@ import React from 'react';
 import './App.css';
 import UserAccessRouter from './routes/UserAccessRouter';
 import NoAccessRouter from './routes/NoAccessRouter';
+import autorizeState from './store/accoutState/autorizeState';
 
 function App() {
-  const isAuthorize = true;
+	const { isAuthorize } = autorizeState;
+	console.log(isAuthorize);
 
-  const routes = {
-    true: <UserAccessRouter />,
-    false: <NoAccessRouter />,
-  };
+	const isAuthorizeFix = true;
 
-  return routes[`${isAuthorize}`];
+	const routes = {
+		true: <UserAccessRouter />,
+		false: <NoAccessRouter />,
+	};
+
+	return routes[`${isAuthorizeFix}`];
 }
 
 export default App;

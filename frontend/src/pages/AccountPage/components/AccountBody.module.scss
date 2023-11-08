@@ -1,0 +1,23 @@
+.main{
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  z-index: 1;
+
+  background: #272727;
+  //background-position: center;
+  //background-size: cover;
+  //background-repeat: no-repeat;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.buttonPos {
+  position: fixed;
+  //margin: $margin-menu;
+  z-index: 2;
+}
