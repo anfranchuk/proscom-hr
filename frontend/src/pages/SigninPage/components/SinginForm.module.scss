@@ -1,5 +1,3 @@
-$primary-color: #00c2fd;
-
 .card {
 	width: 40%;
 	height: 50%;
@@ -12,10 +10,7 @@ $primary-color: #00c2fd;
 	align-items: center;
 	justify-content: center;
 
-	background: rgba(58, 58, 58, 0.7);
-	backdrop-filter: blur(17px);
-
-	border-radius: 14px;
+	background: #fff;
 }
 
 .formikCard {
@@ -40,15 +35,13 @@ $primary-color: #00c2fd;
 
 .textfieldStyle {
 	width: 100%;
-	height: 81px;
+	height: 50px;
 
 	font-family: 'Inter';
 	font-size: 20px;
 
-	border-radius: 8px;
 	border: none;
-	background: rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(50px);
+	background: rgba(217, 217, 217, 1);
 }
 
 .error{
@@ -61,11 +54,10 @@ $primary-color: #00c2fd;
 
 	font-family: 'Inter';
 	font-size: 20px;
-	border: 2px solid #00c2fd;
-	border-radius: 10px;
+	border: none;
 
 	color: #000000;
-	background-color: $primary-color;
+	background-color: rgba(254, 141, 32, 1);
 
 	cursor: pointer;
 }
