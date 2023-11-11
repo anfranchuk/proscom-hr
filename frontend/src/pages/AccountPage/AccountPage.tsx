@@ -48,10 +48,10 @@ const AccountPage: React.FC = () => {
 
 					<div className={styles.gridItemWithScroll} style={{width: widthTop, height: `calc(${heightTop} - 280px)`}}>
 						<div className={styles.scrItem}>
-							<div style={{background: 'green', marginRight: 20, width: 250, height: 15}}></div>
-							<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>
-							<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>
-							<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>
+							{/*<div style={{background: 'green', marginRight: 20, width: 250, height: 15}}></div>*/}
+							{/*<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>*/}
+							{/*<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>*/}
+							{/*<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>*/}
 						</div>
 					</div>
 				</div>
@@ -72,16 +72,16 @@ const AccountPage: React.FC = () => {
 
 						<div className={styles.gridItemWithScroll} style={{width: widthBottom, height: `calc(${heightBottom} - 280px)`}}>
 							<div className={styles.scrItem}>
-								<div style={{background: 'green', marginRight: 20, width: 250, height: 15}}></div>
-								<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>
-								<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>
-								<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>
+								{/*<div style={{background: 'green', marginRight: 20, width: 250, height: 15}}></div>*/}
+								{/*<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>*/}
+								{/*<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>*/}
+								{/*<div style={{background: 'green', marginRight: 20, width: 150, height: 15}}></div>*/}
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div className={styles.item} style={{background: 'blue'}}>
+				<div className={styles.item} /*style={{background: 'blue'}}*/>
 					<div className={styles.titles}>История</div>
 
 				</div>
