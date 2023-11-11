@@ -31,7 +31,7 @@
 5. Подробная аналитика с рекомендацией для действий по конкретным сотрудникам для руководителей.
 
 ### Функциональная модель
-<img width="900" height="300" alt="func_scheme" src="https://github.com/TommyCalmman/proscom-hr/blob/backend/static-files/func-model.png"> 
+<img width="900" height="200" alt="func_scheme" src="https://github.com/TommyCalmman/proscom-hr/blob/backend/static-files/func-model.png"> 
 
 ## <a name="startup">Запуск</a>
 
