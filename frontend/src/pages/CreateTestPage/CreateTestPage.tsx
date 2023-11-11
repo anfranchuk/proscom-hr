@@ -45,72 +45,66 @@ const CreateTestPage: React.FC = () => {
 	};
 
 	return (
-		<div className={styles.main}>
-			<div className={styles.gridContainer}>
-				<div>Руку</div>
-				<div className={styles.wrapper}>
-					<h1 className={styles.createTestTitle}>Создать тест</h1>
-					{columnsFields.splice(0, 3).map(({ title, name }) => {
-						const key = `Modal-Add-${title}-${name}`;
-						return (
-							<div key={key} className={styles.box}>
-								<div className={styles.container}>
-									<div className={styles.title}>{title}</div>
-									<div className={styles.inputBox}>
-										<input
-											className={styles.styleInput}
-											id={name}
-											value={inputData[name]}
-											onChange={handleChangeInput(name)}
-										/>
-									</div>
-								</div>
-							</div>
-						);
-					})}
-					<div  className={styles.boxRows}>
-						{columnsFields.splice(0, columnsFields.length).map(({ title, name }) => {
-							const key = `columnsFields-${title}-${name}`;
-							return (
-								<div key={key} className={styles.containerRows}>
-									<div className={styles.title}>{title}</div>
-									<div className={styles.inputBox}>
-										<input
-											className={styles.styleInput}
-											id={name}
-											value={inputData[name]}
-											onChange={handleChangeInput(name)}
-										/>
-									</div>
-								</div>
-							);
-						})}
-					</div>
-					<div className={styles.box}>
+		<div className={styles.wrapper}>
+			<h1 className={styles.createTestTitle}>Создать тест</h1>
+			{columnsFields.splice(0, 3).map(({ title, name }) => {
+				const key = `Modal-Add-${title}-${name}`;
+				return (
+					<div key={key} className={styles.box}>
 						<div className={styles.container}>
-							<div className={styles.title}>Блок 1</div>
-							<div className={styles.title}>Название</div>
+							<div className={styles.title}>{title}</div>
 							<div className={styles.inputBox}>
 								<input
 									className={styles.styleInput}
+									id={name}
+									value={inputData[name]}
+									onChange={handleChangeInput(name)}
 								/>
 							</div>
 						</div>
 					</div>
-					<div className={styles.box}>
-						<div className={styles.container}>
-							<div className={styles.title}>Учебный материал</div>
+				);
+			})}
+			<div  className={styles.boxRows}>
+				{columnsFields.splice(0, columnsFields.length).map(({ title, name }) => {
+					const key = `columnsFields-${title}-${name}`;
+					return (
+						<div key={key} className={styles.containerRows}>
+							<div className={styles.title}>{title}</div>
 							<div className={styles.inputBox}>
 								<input
 									className={styles.styleInput}
+									id={name}
+									value={inputData[name]}
+									onChange={handleChangeInput(name)}
 								/>
 							</div>
 						</div>
+					);
+				})}
+			</div>
+			<div className={styles.box}>
+				<div className={styles.container}>
+					<div className={styles.title}>Блок 1</div>
+					<div className={styles.title}>Название</div>
+					<div className={styles.inputBox}>
+						<input
+							className={styles.styleInput}
+						/>
 					</div>
-					<button className={styles.styleBtn}>Создать тест</button>
-
 				</div>
 			</div>
+			<div className={styles.box}>
+				<div className={styles.container}>
+					<div className={styles.title}>Учебный материал</div>
+					<div className={styles.inputBox}>
+						<input
+							className={styles.styleInput}
+						/>
+					</div>
+				</div>
+			</div>
+			<button className={styles.styleBtn}>Создать тест</button>
 		</div>
 	);
 };

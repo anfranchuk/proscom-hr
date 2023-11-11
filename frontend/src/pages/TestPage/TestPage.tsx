@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styles from './TestPage.module.scss';
 import Tests from './components/Tests';
 import CheckIcon from '@mui/icons-material/Check';
+import CreateTestPage from '../CreateTestPage/CreateTestPage';
 
 const jobs = [
 	{
@@ -39,7 +40,7 @@ const TestPage: React.FC = () => {
 	const jobType = {
 		tests: <Tests/>,
 		questions: <div></div>,
-		createTest: <div></div>,
+		createTest: <CreateTestPage />,
 	};
 
 	return (
