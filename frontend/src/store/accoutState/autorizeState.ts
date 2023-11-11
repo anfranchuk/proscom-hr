@@ -3,7 +3,6 @@ import { makePersistable } from 'mobx-persist-store';
 import {
 	AuthData,
 	AutorizeStateUserRoles as UserRoles,
-	UserDataFix,
 } from './interfaces';
 
 const getIsAuthorize = (): boolean => {
@@ -17,41 +16,6 @@ const getIsAuthorize = (): boolean => {
 };
 
 class AutorizeState {
-	demoUser = {
-		email: 'testLogIn@testLogIn.com',
-		password: 'testPassword',
-	};
-
-	// emptyData: PostData = {
-	// 	id: -1,
-	// 	email: '',
-	// 	password : '',
-	// 	phone: '',
-	// 	first_name: '',
-	// 	last_name:  '',
-	// 	grouprole: '',
-	// 	group: ''
-	// };
-	//
-	// postData: PostData = this.emptyData;
-
-	authData = localStorage.getItem('AuthStore');
-
-	user: UserDataFix = {
-		id: 0,
-
-		firstName: '',
-		lastName: '',
-		email: '',
-		grouprole: 'groupuser',
-		phone: '',
-		image: '',
-		role: 'spotoperator',
-		ruRole: 'оператор',
-		ruGroupRole: ''
-	};
-
-	
 	isAuthorize = false;
 	token = '';
 	userRole: keyof UserRoles = 'spotoperator';
@@ -70,19 +34,6 @@ class AutorizeState {
 
 	setIsAutorize = (isAuthorize = false) => {
 		this.isAuthorize = isAuthorize;
-	};
-
-	setToken = (token: string) => {
-		this.token = token;
-	};
-
-	setUserRole = (role: keyof UserRoles) => {
-		this.userRole = role;
-	};
-
-	checkAuth = (errorText: number | null) => {
-		const isAuthError = errorText === 401;
-		this.isAuthorize = !isAuthError;
 	};
 }
 

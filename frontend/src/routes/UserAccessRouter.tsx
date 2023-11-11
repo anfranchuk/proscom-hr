@@ -5,7 +5,7 @@ import Account from '../pages/AccountPage/AccountPage';
 import TestPage from '../pages/TestPage/TestPage';
 
 const UserAccessRouter: React.FC = () => {
-	const path = '/';
+	const path = '/tests';
 
 	return (
 		<BrowserRouter>
@@ -15,7 +15,6 @@ const UserAccessRouter: React.FC = () => {
 				<Route path='/account' element={<Account />} />
 				<Route path='/tests' element={<TestPage />} />
 				<Route path='/tasks' element={<Account />} />
-				<Route path='/shop' element={<Account />} />
 				<Route path='/shop' element={<Account />} />
 				<Route path='/coworkers' element={<Account />} />
 				<Route path='*' element={<Navigate to={path} />} />

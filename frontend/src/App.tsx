@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
+import { observer } from 'mobx-react-lite';
 import UserAccessRouter from './routes/UserAccessRouter';
 import NoAccessRouter from './routes/NoAccessRouter';
 import autorizeState from './store/accoutState/autorizeState';
@@ -10,7 +11,7 @@ const App: React.FC = observer(() => {
 
 	useEffect(() => {
 		setIsAutorize(isAuthorize);
-	}, [isAuthorize])
+	}, [isAuthorize]);
 
 	const routes = {
 		true: <UserAccessRouter />,
