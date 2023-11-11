@@ -71,11 +71,30 @@ const data = [
 	},
 ];
 
+type TestItem = {
+	id: number;
+	question: string;
+	options: string[];
+};
+
+const testData: TestItem[] = [
+	{
+		id: 1,
+		question: 'What is the capital of France?',
+		options: ['Paris', 'Berlin', 'London', 'Madrid']
+	},
+	{
+		id: 2,
+		question: 'Which language is widely used for web development?',
+		options: ['JavaScript', 'Python', 'Java', 'C++']
+	},
+	// Add more test items here
+];
+
 const Tests: React.FC = () => {
 	// const [testNumber, setTestNumber] = useState<number | null>(null);
 	const [selectedTest, setSelectedTest] = useState<CardData>(defTest);
 	const [startTest, setStartTest] = useState(false);
-	
 
 	const isOneTest = selectedTest.id !== 0;
 
@@ -108,6 +127,23 @@ const Tests: React.FC = () => {
 			.padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 	};
 
+	const [selectedOptions, setSelectedOptions] = useState<Record<number, string>>({});
+
+	const handleOptionChange = (questionId: number, option: string) => {
+		setSelectedOptions((prevSelectedOptions) => ({
+			...prevSelectedOptions,
+			[questionId]: option,
+		}));
+	};
+
+	const handleSubmit = () => {
+		// Prepare the selected options for sending to the backend
+		const selectedOptionsArray = Object.values(selectedOptions);
+		setStartTest(false);
+		setSelectedTest(defTest);
+		// Send the data to the backend using an API call or any other method
+		console.log(selectedOptionsArray);
+	};
 	
 	const OneSetCards = () => (
 		<div className={styles.cards}>
@@ -172,16 +208,31 @@ const Tests: React.FC = () => {
 		<div className={`${styles.bodyTest} ${styles.mainTest}`}>
 			<div className={styles.status}>{formatTime(time)}</div>
 
-			<div className={styles.cardText}>
+			<div className={styles.cardText} style={{width: 'calc(100% - 20px)', marginLeft: 20 }}>
 				<div className={styles.title}>{selectedTest.title}</div>
 
-				<div>{selectedTest.attempts}</div>
-				<div>{selectedTest.description}</div>
+				{testData.map((item) => (
+					<div key={item.id}>
+						<div>{item.question}</div>
+						{item.options.map((option, index) => (
+							<label key={index}>
+								<input
+									type="radio"
+									name={`question${item.id}`}
+									value={option}
+									checked={selectedOptions[item.id] === option}
+									onChange={() => handleOptionChange(item.id, option)}
+								/>
+								{option}
+							</label>
+						))}
+					</div>
+				))}
 			</div>
 
 			<div className={styles.bottomCard}>
 				<div></div>
-				<div className={styles.startButton} onClick={() => setSelectedTest(defTest)}>Проверить</div>
+				<div className={styles.startButton} onClick={handleSubmit}>Проверить</div>
 			</div>
 		</div>
 	);
