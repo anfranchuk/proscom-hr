@@ -1,0 +1,67 @@
+.main {
+  width: 100%;
+  height: calc(100% - 64px);
+
+  position: absolute;
+  z-index: 1;
+
+  background: #EAEFF5;
+}
+
+.gridContainer {
+  width: 88%;
+  height: calc(92% - 50px);
+
+  margin: 4% 6%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  // For large screens, 2 columns
+  grid-template-rows: 1fr 2fr;     // For large screens, 2 rows
+  gap: 25px;
+
+  @media screen and (max-width: 600px) { // For small screens
+    width: 92%;
+
+    margin: 4% 4%;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr;
+
+    overflow: auto;
+  }
+}
+
+.smallGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 25px;
+}
+
+.item {
+  background: white;
+}
+
+.gridItemWithScroll {
+  padding: 10px;
+
+  overflow: auto;
+}
+
+.scrItem {
+  width: max-content;
+  display: flex;
+}
+
+.titles {
+  margin: 15px;
+
+  color: #1E1E1E;
+
+  font-family: Istok Web, sans-serif;
+  font-size: clamp(18px, 30px, 30px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+

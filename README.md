@@ -21,8 +21,6 @@
 Система должна позволять собирать различные подборки материалов для изучения, мотивировать сотрудника их изучать, а также контролировать процесс прохождения онбординга сотрудниками.
 #### Ресурсы
 Примеры материалов с дифференсацией по ролям сотрудников, департаментам и проч.
-#### Описание итогового продукта
-Веб-сервис
 
 ## <a name="solution">Решение </a>
 
@@ -33,15 +31,7 @@
 5. Подробная аналитика с рекомендацией для действий по конкретным сотрудникам для руководителей.
 
 ### Функциональная модель
-<img width="900" height="400" alt="func_scheme" src="https://github.com/TommyCalmman/proscom-hr/blob/backend/static-files/func-model.jpg"> 
-
-<br>
-<p>Пример обработки </p>
-
-| INPUT  | Обработка |
-| ------------- | ------------- |
-| 1  | 2  |
-
+<img width="900" height="400" alt="func_scheme" src="https://github.com/TommyCalmman/proscom-hr/blob/backend/static-files/func-model.png"> 
 
 ## <a name="startup">Запуск</a>
 
@@ -50,8 +40,16 @@
 ```Bash
 git clone https://github.com/TommyCalmman/proscom-hr.git
 ```
+2. Запустите docker-compose
+```Bash
+cd proscom-hr
+docker-compose up --build
+```
+
 ## <a name="stack">Стек </a>
   <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original-wordmark.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/tree/master/icons/react/react-original.svg" title="Python" alt="React" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/tree/master/icons/django/django-plain.svg" title="Django" alt="React" width="40" height="40"/>&nbsp;
 
 ## <a name="team">Команда </a>
 
@@ -62,5 +60,5 @@ git clone https://github.com/TommyCalmman/proscom-hr.git
 *Владислав Орлов  
 
 ## <a name="urls">Ссылки </a>
- 
-- [ссылка на модели](https://)        
+       
+- [road-map решения](https://jamboard.google.com/d/1loFokW9x3wFw_GAuMZxhf6QcSm_rbu1S6LMxzknRXHo/edit?usp=sharing)    

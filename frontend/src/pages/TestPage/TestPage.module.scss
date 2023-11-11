@@ -1,0 +1,62 @@
+.main {
+  width: 100%;
+  height: calc(100% - 64px);
+
+  position: absolute;
+  z-index: 1;
+
+  display: flex;
+
+  background: #EAEFF5;
+}
+
+.containerMenu {
+  width: 15%;
+
+  margin: 2%;
+}
+
+.menuJob {
+  background: white;
+}
+
+.menuPlan {
+  margin-top: 18px;
+  background: white;
+}
+
+.buttonMenu {
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #555555;
+  font-size: 20px;
+  font-family: 'Istok Web';
+  font-weight: 400;
+  word-wrap: break-word;
+
+  cursor: pointer;
+}
+
+.text {
+  width: 254.39px;
+  height: 180px;
+  left: 14px;
+  top: 1px;
+  position: absolute;
+  color: #555555;
+  font-size: 30.10px;
+  font-family: 'Istok Web';
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.cards {
+  width: 80%;
+  height: 90%;
+
+  margin: 2% 5% 5% 0;
+}

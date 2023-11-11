@@ -1,0 +1,87 @@
+$primary-color: #00c2fd;
+
+.card {
+	width: 40%;
+	height: 50%;
+
+	padding: 20px;
+
+	display: flex;
+
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	background: rgba(58, 58, 58, 0.7);
+	backdrop-filter: blur(17px);
+
+	border-radius: 14px;
+}
+
+.formikCard {
+	width: 90%;
+	height: 80%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 50px;
+
+	padding: 20px;
+}
+
+.textFieldCard {
+	display: flex;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.textfieldStyle {
+	width: 100%;
+	height: 81px;
+
+	font-family: 'Inter';
+	font-size: 20px;
+
+	border-radius: 8px;
+	border: none;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(50px);
+}
+
+.error{
+	color: red;
+}
+
+.btnSubmit {
+	width: 100%;
+	height: calc(81px - 20px);
+
+	font-family: 'Inter';
+	font-size: 20px;
+	border: 2px solid #00c2fd;
+	border-radius: 10px;
+
+	color: #000000;
+	background-color: $primary-color;
+
+	cursor: pointer;
+}
+
+@media (max-width: 865px) {
+	.card {
+		width: 70%;
+	}
+}
+
+@media (max-width: 385px) {
+	.textfieldStyle {
+		font-size: 16px;
+	}
+
+	.btnSubmit {
+		font-size: 16px;
+	}
+}
