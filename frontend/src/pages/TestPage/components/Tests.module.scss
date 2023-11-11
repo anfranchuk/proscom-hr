@@ -1,0 +1,157 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #D2D2D2;
+    border-radius: 3px;
+  }
+}
+
+.card {
+  height: 27vh;
+
+  display: flex;
+
+  background: white;
+}
+
+.image {
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  margin: 25px;
+
+  border-radius: 50%;
+}
+
+.contentContainer {
+  width: 70%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+.status {
+  width: 30%;
+  height: 10%;
+
+  max-height: 30px;
+  max-width: 150px;
+
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: clamp(15px, 16px, 20px);
+  font-family: 'Istok Web';
+  font-weight: 400;
+  word-wrap: break-word;
+
+  background: #FF2E00;
+}
+
+.cardText {
+  height: calc(100% - 20% - 20px);
+  overflow: auto;
+
+  color: #555555;
+  font-size: 20px;
+  font-family: 'Istok Web';
+  font-weight: 400;
+  word-wrap: break-word;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #D2D2D2;
+    border-radius: 3px;
+  }
+}
+
+.title {
+  color: #555555;
+  font-size: 30.10px;
+  font-family: 'Istok Web';
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.bottomCard {
+  width: 100%;
+  height: calc(10% + 20px);
+
+  margin: 20px 20px 20px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  color: #555555;
+  font-size: 20px;
+  font-family: 'Istok Web';
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.startButton {
+  width: 30%;
+  max-width: 250px;
+
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: clamp(17px, 20px, 23px);
+  font-family: 'Istok Web';
+  font-weight: 400;
+  word-wrap: break-word;
+
+  background: #FFA800;
+  cursor: pointer;
+}
+
+.bodyTest {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  background: white;
+
+  &.mainTest {
+    height: 100%;
+
+    overflow: auto;
+  }
+}
+
+.cardTextImg {
+  width: 100%;
+
+  height: max-content;
+  display: flex;
+}
+
+.bottomBtns {
+  width: 70%;
+
+  display: flex;
+  justify-content: flex-end;
+}

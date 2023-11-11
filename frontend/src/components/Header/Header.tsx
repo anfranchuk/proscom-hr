@@ -150,7 +150,7 @@ const Header: React.FC = () => {
 	return (
 		<Box sx={{ width: '100%' }}>
 			<AppBar sx={{ bgcolor: '#3392E5' }} position="static" color="primary" enableColorOnDark>
-				<Toolbar>
+				<Toolbar style={{display: 'flex', justifyContent: 'space-between'}}>
 					{/*<IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>*/}
 					{/*	<MenuIcon />*/}
 					{/*</IconButton>*/}
@@ -173,11 +173,11 @@ const Header: React.FC = () => {
 
 					<div>
 						<IconButton>
-							<NotificationsIcon />
+							<NotificationsIcon fontSize='large' sx={{ color: 'white' }} />
 						</IconButton>
 
 						<IconButton onClick={() => navigate('/account')}>
-							<AccountCircle />
+							<AccountCircle fontSize='large' sx={{ color: 'white' }} />
 						</IconButton>
 					</div>
 				</Toolbar>

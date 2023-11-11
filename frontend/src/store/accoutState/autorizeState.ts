@@ -5,11 +5,6 @@ import {
 	AutorizeStateUserRoles as UserRoles,
 	UserDataFix,
 } from './interfaces';
-// import { PersonInfoPostData as PostData } from '../../components/Account/ContentModal/ContentForManager/PersonInfo/PersonInfo.interface';
-// import { AccessPlace, AccountPlace } from '../placeState/interfaces';
-// import { TechUser, UserAccess } from '../../../api/AccountPage/prepareAccountData.interface';
-// import connectState from '../connectState/connectState';
-
 
 const getIsAuthorize = (): boolean => {
 	const authData = localStorage.getItem('isAuthorize');
