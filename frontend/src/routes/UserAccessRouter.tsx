@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import Account from '../pages/AccountPage/AccountPage';
+import CreateTestPage from '../pages/CreateTestPage/CreateTestPage';
 import Header from '../components/Header/Header';
 
 const UserAccessRouter: React.FC = () => {
@@ -12,7 +13,7 @@ const UserAccessRouter: React.FC = () => {
 
 			<Routes>
 				<Route path='/account' element={<Account />} />
-				<Route path='/tests' element={<Account />} />
+				<Route path='/tests' element={<CreateTestPage />} />
 				<Route path='/tasks' element={<Account />} />
 				<Route path='/shop' element={<Account />} />
 				<Route path='/shop' element={<Account />} />
