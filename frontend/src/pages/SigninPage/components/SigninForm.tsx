@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Formik, Form } from 'formik';
 import { FormValues, initialValues } from './SigninForm.interface';
-import connectState from '../../../store/connectState/connectState';
+// import connectState from '../../../store/connectState/connectState';
 import autorizeState from '../../../store/accoutState/autorizeState';
-import { ServerAns, prepareAutrizeData } from '../../../api/SigninPage/prepareAutrizeData';
-import { apiPostAuthorize } from '../../../api/SigninPage/apiSignin';
+// import { ServerAns, prepareAutrizeData } from '../../../api/SigninPage/prepareAutrizeData';
+// import { apiPostAuthorize } from '../../../api/SigninPage/apiSignin';
 import styles from './SinginForm.module.scss';
 import { styled } from '@mui/material/styles';
 import { TextField, TextFieldProps } from '@mui/material';
@@ -55,32 +55,37 @@ const StyledTextField = styled(TextField)<TextFieldProps>(() => ({
 }));
 
 const SigninForm: React.FC = () => {
-	const [error, setError] = useState(false);
+	// const [error, setError] = useState(false);
 
 	const handleSubmit = (values: FormValues) => {
-		const { postAutrizeLink } = connectState;
+		// const { postAutrizeLink } = connectState;
+		const { setIsAutorize } = autorizeState;
+		console.log(values);
+		setIsAutorize(true);//delete
+
 		
-		apiPostAuthorize(postAutrizeLink, values, {}).then(({ data, error }) => {
-			const { isError } = error;
-			setError(isError);
-			if (isError) return;
-
-			const { isAuthorize, token, role } = prepareAutrizeData(data as ServerAns);
-			const { setIsAutorize, setToken, setUserRole } = autorizeState;
-
-			setIsAutorize(isAuthorize);
-			setToken(token);
-			setUserRole(role);
-		});
+		// apiPostAuthorize(postAutrizeLink, values, {}).then(({ data, error }) => {
+		// 	const { isError } = error;
+		//
+		// 	if (isError) return;
+		//
+		// 	// const { isAuthorize, token, role } = prepareAutrizeData(data as ServerAns);
+		//
+		//
+		// 	setIsAutorize(data as boolean);
+		// 	// setToken(token);
+		// 	// setUserRole(role);
+		// });
 	};
 
 	return (
 		<div className={styles.card}>
+			<h1>Вход</h1>
 			<Formik
 				initialValues={initialValues}
 				onSubmit={handleSubmit}
 			>
-				{({ values, handleChange, handleBlur, errors, touched }) => (
+				{({ values, handleChange, handleBlur }) => (
 					<Form className={styles.formikCard}>
 						<div className={styles.textFieldCard}>
 							<StyledTextField
@@ -93,7 +98,7 @@ const SigninForm: React.FC = () => {
 								onChange={handleChange}
 								onBlur={handleBlur}
 							/>
-							{errors.email && touched.email && <div>{errors.email}</div>}
+							{/*{errors.email && touched.email && <div>{errors.email}</div>}*/}
 
 							<StyledTextField
 								className={styles.textfieldStyle}
@@ -105,8 +110,8 @@ const SigninForm: React.FC = () => {
 								onChange={handleChange}
 								onBlur={handleBlur}
 							/>
-							{errors.password && touched.password && <div>{errors.password}</div>}
-							{error && <div className={styles.error}>Неверный логин или пароль</div>}
+							{/*{errors.password && touched.password && <div>{errors.password}</div>}*/}
+							{/*{error && <div className={styles.error}>Неверный логин или пароль</div>}*/}
 						</div>
 						<button className={styles.btnSubmit} type="submit">
 							Войти

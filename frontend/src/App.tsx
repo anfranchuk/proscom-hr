@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import UserAccessRouter from './routes/UserAccessRouter';
 import NoAccessRouter from './routes/NoAccessRouter';
 import autorizeState from './store/accoutState/autorizeState';
 
-function App() {
+const App: React.FC = observer(() => {
 	const { isAuthorize } = autorizeState;
-	console.log(isAuthorize);
+	const [isAuth, setIsAutorize] = React.useState(false);
 
-	const isAuthorizeFix = true;
+	useEffect(() => {
+		setIsAutorize(isAuthorize);
+	}, [isAuthorize])
 
 	const routes = {
 		true: <UserAccessRouter />,
 		false: <NoAccessRouter />,
 	};
 
-	return routes[`${isAuthorizeFix}`];
-}
+	return routes[`${isAuth}`];
+});
 
 export default App;
